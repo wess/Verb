@@ -27,14 +27,15 @@
     
     [controller.view addSubview:view];
     
+    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0.0, 200.0, 40.0, 40.0)];
+    view2.backgroundColor = [UIColor yellowColor];
+    
+    [controller.view addSubview:view2];
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [view verb_makeAnimation:^(VerbAnimator *animator) {
             animator.gravity.direction(VerbDirectionDown).magnitude(10);
-            animator.collision.boundaryRect(CGRectMake(10.0, view.bounds.size.height - 1, view.bounds.size.width, view.bounds.size.height)).action(^{
-                [UIView animateWithDuration:0.2 animations:^{
-                    view.backgroundColor = [UIColor greenColor];
-                }];
-            });
+            animator.collision.boundaryRect(CGRectMake(0.0, 0.0, controller.view.bounds.size.width, controller.view.bounds.size.height - (view2.frame.size.height + view2.frame.origin.y)));
         }];
     });
     
