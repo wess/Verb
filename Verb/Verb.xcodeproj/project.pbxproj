@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0854078218EDB50800C5E75E /* VerbGravityBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E1518ED9F9C005FAC70 /* VerbGravityBehavior.h */; };
+		0854078318EDB51600C5E75E /* VerbBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E1A18EDA172005FAC70 /* VerbBehavior.h */; };
+		0854078818EDDD2F00C5E75E /* VerbCollisionBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 0854078618EDDD2F00C5E75E /* VerbCollisionBehavior.h */; };
+		0854078918EDDD2F00C5E75E /* VerbCollisionBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 0854078718EDDD2F00C5E75E /* VerbCollisionBehavior.m */; };
+		0869D07318ECC9A300898A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D07218ECC9A300898A06 /* Foundation.framework */; };
+		0869D07818ECC9A300898A06 /* Verb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0869D07718ECC9A300898A06 /* Verb.h */; };
+		0869D08118ECC9A300898A06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D08018ECC9A300898A06 /* XCTest.framework */; };
+		0869D08218ECC9A300898A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D07218ECC9A300898A06 /* Foundation.framework */; };
+		0869D08418ECC9A300898A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D08318ECC9A300898A06 /* UIKit.framework */; };
+		0869D08718ECC9A300898A06 /* libVerb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D06F18ECC9A300898A06 /* libVerb.a */; };
+		0869D08D18ECC9A400898A06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0869D08B18ECC9A400898A06 /* InfoPlist.strings */; };
+		0869D08F18ECC9A400898A06 /* VerbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869D08E18ECC9A400898A06 /* VerbTests.m */; };
+		0869D09D18ECCA1800898A06 /* UIView+Verb.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869D09C18ECCA1800898A06 /* UIView+Verb.m */; };
+		0869D09F18ECCD3D00898A06 /* UIView+Verb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0869D09B18ECCA1800898A06 /* UIView+Verb.h */; };
+		0869D0A018ECCD3D00898A06 /* Verb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0869D07718ECC9A300898A06 /* Verb.h */; };
+		0869D0A118ECCD6400898A06 /* UIView+Verb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0869D09B18ECCA1800898A06 /* UIView+Verb.h */; };
+		08DAB98218EDF40700BF0D80 /* VerbCollisionBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0854078618EDDD2F00C5E75E /* VerbCollisionBehavior.h */; };
+		08F22E0718ECD787005FAC70 /* VerbConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E0618ECD777005FAC70 /* VerbConstants.h */; };
+		08F22E0B18ECD8A5005FAC70 /* VerbAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */; };
+		08F22E0C18ECD8A5005FAC70 /* VerbAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F22E0A18ECD8A5005FAC70 /* VerbAnimator.m */; };
+		08F22E0D18ECD9E9005FAC70 /* VerbAnimator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */; };
+		08F22E0E18ECDACB005FAC70 /* VerbConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E0618ECD777005FAC70 /* VerbConstants.h */; };
+		08F22E1718ED9F9C005FAC70 /* VerbGravityBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E1518ED9F9C005FAC70 /* VerbGravityBehavior.h */; };
+		08F22E1818ED9F9C005FAC70 /* VerbGravityBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F22E1618ED9F9C005FAC70 /* VerbGravityBehavior.m */; };
+		08F22E1C18EDA172005FAC70 /* VerbBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E1A18EDA172005FAC70 /* VerbBehavior.h */; };
+		08F22E1D18EDA172005FAC70 /* VerbBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F22E1B18EDA172005FAC70 /* VerbBehavior.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0869D08518ECC9A300898A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0869D06718ECC9A300898A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0869D06E18ECC9A300898A06;
+			remoteInfo = Verb;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0869D06D18ECC9A300898A06 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				08DAB98218EDF40700BF0D80 /* VerbCollisionBehavior.h in CopyFiles */,
+				0854078318EDB51600C5E75E /* VerbBehavior.h in CopyFiles */,
+				0854078218EDB50800C5E75E /* VerbGravityBehavior.h in CopyFiles */,
+				08F22E0E18ECDACB005FAC70 /* VerbConstants.h in CopyFiles */,
+				08F22E0D18ECD9E9005FAC70 /* VerbAnimator.h in CopyFiles */,
+				0869D0A118ECCD6400898A06 /* UIView+Verb.h in CopyFiles */,
+				0869D07818ECC9A300898A06 /* Verb.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0854078618EDDD2F00C5E75E /* VerbCollisionBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbCollisionBehavior.h; sourceTree = "<group>"; };
+		0854078718EDDD2F00C5E75E /* VerbCollisionBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbCollisionBehavior.m; sourceTree = "<group>"; };
+		0869D06F18ECC9A300898A06 /* libVerb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVerb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0869D07218ECC9A300898A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0869D07618ECC9A300898A06 /* Verb-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Verb-Prefix.pch"; sourceTree = "<group>"; };
+		0869D07718ECC9A300898A06 /* Verb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Verb.h; sourceTree = "<group>"; };
+		0869D07F18ECC9A300898A06 /* VerbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0869D08018ECC9A300898A06 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0869D08318ECC9A300898A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		0869D08A18ECC9A400898A06 /* VerbTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VerbTests-Info.plist"; sourceTree = "<group>"; };
+		0869D08C18ECC9A400898A06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0869D08E18ECC9A400898A06 /* VerbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerbTests.m; sourceTree = "<group>"; };
+		0869D09B18ECCA1800898A06 /* UIView+Verb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Verb.h"; sourceTree = "<group>"; };
+		0869D09C18ECCA1800898A06 /* UIView+Verb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Verb.m"; sourceTree = "<group>"; };
+		08F22E0618ECD777005FAC70 /* VerbConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerbConstants.h; sourceTree = "<group>"; };
+		08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbAnimator.h; sourceTree = "<group>"; };
+		08F22E0A18ECD8A5005FAC70 /* VerbAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbAnimator.m; sourceTree = "<group>"; };
+		08F22E1518ED9F9C005FAC70 /* VerbGravityBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbGravityBehavior.h; sourceTree = "<group>"; };
+		08F22E1618ED9F9C005FAC70 /* VerbGravityBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbGravityBehavior.m; sourceTree = "<group>"; };
+		08F22E1A18EDA172005FAC70 /* VerbBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbBehavior.h; sourceTree = "<group>"; };
+		08F22E1B18EDA172005FAC70 /* VerbBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbBehavior.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0869D06C18ECC9A300898A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0869D07318ECC9A300898A06 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0869D07C18ECC9A300898A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0869D08118ECC9A300898A06 /* XCTest.framework in Frameworks */,
+				0869D08418ECC9A300898A06 /* UIKit.framework in Frameworks */,
+				0869D08718ECC9A300898A06 /* libVerb.a in Frameworks */,
+				0869D08218ECC9A300898A06 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0854078518EDDD2100C5E75E /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+				0854078618EDDD2F00C5E75E /* VerbCollisionBehavior.h */,
+				0854078718EDDD2F00C5E75E /* VerbCollisionBehavior.m */,
+			);
+			name = Collision;
+			sourceTree = "<group>";
+		};
+		0869D06618ECC9A300898A06 = {
+			isa = PBXGroup;
+			children = (
+				0869D07418ECC9A300898A06 /* Verb */,
+				0869D08818ECC9A300898A06 /* VerbTests */,
+				0869D07118ECC9A300898A06 /* Frameworks */,
+				0869D07018ECC9A300898A06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0869D07018ECC9A300898A06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0869D06F18ECC9A300898A06 /* libVerb.a */,
+				0869D07F18ECC9A300898A06 /* VerbTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0869D07118ECC9A300898A06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0869D07218ECC9A300898A06 /* Foundation.framework */,
+				0869D08018ECC9A300898A06 /* XCTest.framework */,
+				0869D08318ECC9A300898A06 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0869D07418ECC9A300898A06 /* Verb */ = {
+			isa = PBXGroup;
+			children = (
+				08F22E0F18ED9000005FAC70 /* Behaviors */,
+				08F22E0818ECD898005FAC70 /* Animator */,
+				0869D09A18ECCA0300898A06 /* UIView */,
+				0869D07718ECC9A300898A06 /* Verb.h */,
+				0869D07518ECC9A300898A06 /* Supporting Files */,
+			);
+			path = Verb;
+			sourceTree = "<group>";
+		};
+		0869D07518ECC9A300898A06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0869D07618ECC9A300898A06 /* Verb-Prefix.pch */,
+				08F22E0618ECD777005FAC70 /* VerbConstants.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0869D08818ECC9A300898A06 /* VerbTests */ = {
+			isa = PBXGroup;
+			children = (
+				0869D08E18ECC9A400898A06 /* VerbTests.m */,
+				0869D08918ECC9A400898A06 /* Supporting Files */,
+			);
+			path = VerbTests;
+			sourceTree = "<group>";
+		};
+		0869D08918ECC9A400898A06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0869D08A18ECC9A400898A06 /* VerbTests-Info.plist */,
+				0869D08B18ECC9A400898A06 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0869D09A18ECCA0300898A06 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0869D09B18ECCA1800898A06 /* UIView+Verb.h */,
+				0869D09C18ECCA1800898A06 /* UIView+Verb.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		08F22E0818ECD898005FAC70 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */,
+				08F22E0A18ECD8A5005FAC70 /* VerbAnimator.m */,
+			);
+			name = Animator;
+			sourceTree = "<group>";
+		};
+		08F22E0F18ED9000005FAC70 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				0854078518EDDD2100C5E75E /* Collision */,
+				08F22E1418ED9F86005FAC70 /* Gravity */,
+				08F22E1918EDA166005FAC70 /* Base */,
+			);
+			name = Behaviors;
+			sourceTree = "<group>";
+		};
+		08F22E1418ED9F86005FAC70 /* Gravity */ = {
+			isa = PBXGroup;
+			children = (
+				08F22E1518ED9F9C005FAC70 /* VerbGravityBehavior.h */,
+				08F22E1618ED9F9C005FAC70 /* VerbGravityBehavior.m */,
+			);
+			name = Gravity;
+			sourceTree = "<group>";
+		};
+		08F22E1918EDA166005FAC70 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				08F22E1A18EDA172005FAC70 /* VerbBehavior.h */,
+				08F22E1B18EDA172005FAC70 /* VerbBehavior.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0869D09E18ECCD2800898A06 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08F22E0718ECD787005FAC70 /* VerbConstants.h in Headers */,
+				08F22E1C18EDA172005FAC70 /* VerbBehavior.h in Headers */,
+				0854078818EDDD2F00C5E75E /* VerbCollisionBehavior.h in Headers */,
+				0869D09F18ECCD3D00898A06 /* UIView+Verb.h in Headers */,
+				08F22E0B18ECD8A5005FAC70 /* VerbAnimator.h in Headers */,
+				0869D0A018ECCD3D00898A06 /* Verb.h in Headers */,
+				08F22E1718ED9F9C005FAC70 /* VerbGravityBehavior.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0869D06E18ECC9A300898A06 /* Verb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0869D09218ECC9A400898A06 /* Build configuration list for PBXNativeTarget "Verb" */;
+			buildPhases = (
+				0869D06B18ECC9A300898A06 /* Sources */,
+				0869D06C18ECC9A300898A06 /* Frameworks */,
+				0869D06D18ECC9A300898A06 /* CopyFiles */,
+				0869D09E18ECCD2800898A06 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Verb;
+			productName = Verb;
+			productReference = 0869D06F18ECC9A300898A06 /* libVerb.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0869D07E18ECC9A300898A06 /* VerbTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0869D09518ECC9A400898A06 /* Build configuration list for PBXNativeTarget "VerbTests" */;
+			buildPhases = (
+				0869D07B18ECC9A300898A06 /* Sources */,
+				0869D07C18ECC9A300898A06 /* Frameworks */,
+				0869D07D18ECC9A300898A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0869D08618ECC9A300898A06 /* PBXTargetDependency */,
+			);
+			name = VerbTests;
+			productName = VerbTests;
+			productReference = 0869D07F18ECC9A300898A06 /* VerbTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0869D06718ECC9A300898A06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Wess Cope";
+			};
+			buildConfigurationList = 0869D06A18ECC9A300898A06 /* Build configuration list for PBXProject "Verb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0869D06618ECC9A300898A06;
+			productRefGroup = 0869D07018ECC9A300898A06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0869D06E18ECC9A300898A06 /* Verb */,
+				0869D07E18ECC9A300898A06 /* VerbTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0869D07D18ECC9A300898A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0869D08D18ECC9A400898A06 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0869D06B18ECC9A300898A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08F22E1D18EDA172005FAC70 /* VerbBehavior.m in Sources */,
+				0854078918EDDD2F00C5E75E /* VerbCollisionBehavior.m in Sources */,
+				0869D09D18ECCA1800898A06 /* UIView+Verb.m in Sources */,
+				08F22E1818ED9F9C005FAC70 /* VerbGravityBehavior.m in Sources */,
+				08F22E0C18ECD8A5005FAC70 /* VerbAnimator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0869D07B18ECC9A300898A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0869D08F18ECC9A400898A06 /* VerbTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0869D08618ECC9A300898A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0869D06E18ECC9A300898A06 /* Verb */;
+			targetProxy = 0869D08518ECC9A300898A06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0869D08B18ECC9A400898A06 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0869D08C18ECC9A400898A06 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0869D09018ECC9A400898A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0869D09118ECC9A400898A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0869D09318ECC9A400898A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Verb.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Verb/Verb-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0869D09418ECC9A400898A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Verb.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Verb/Verb-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0869D09618ECC9A400898A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Verb/Verb-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VerbTests/VerbTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0869D09718ECC9A400898A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Verb/Verb-Prefix.pch";
+				INFOPLIST_FILE = "VerbTests/VerbTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0869D06A18ECC9A300898A06 /* Build configuration list for PBXProject "Verb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0869D09018ECC9A400898A06 /* Debug */,
+				0869D09118ECC9A400898A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0869D09218ECC9A400898A06 /* Build configuration list for PBXNativeTarget "Verb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0869D09318ECC9A400898A06 /* Debug */,
+				0869D09418ECC9A400898A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0869D09518ECC9A400898A06 /* Build configuration list for PBXNativeTarget "VerbTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0869D09618ECC9A400898A06 /* Debug */,
+				0869D09718ECC9A400898A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0869D06718ECC9A300898A06 /* Project object */;
+}
