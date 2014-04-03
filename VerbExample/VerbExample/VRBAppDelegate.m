@@ -30,7 +30,11 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [view verb_makeAnimation:^(VerbAnimator *animator) {
             animator.gravity.direction(VerbDirectionDown).magnitude(10);
-            animator.collision.insets(UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0));
+            animator.collision.boundaryRect(CGRectMake(10.0, view.bounds.size.height - 1, view.bounds.size.width, view.bounds.size.height)).action(^{
+                [UIView animateWithDuration:0.2 animations:^{
+                    view.backgroundColor = [UIColor greenColor];
+                }];
+            });
         }];
     });
     

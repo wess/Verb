@@ -43,7 +43,8 @@
         @strongify(self);
         
         [self.collision addBoundaryWithIdentifier:nil forPath:path];
-        
+        self.collision.translatesReferenceBoundsIntoBoundary = YES;
+
         return self;
     };
 }
@@ -55,18 +56,20 @@
         @strongify(self);
         
         [self.collision addBoundaryWithIdentifier:nil forPath:[UIBezierPath bezierPathWithRect:rect]];
+        self.collision.translatesReferenceBoundsIntoBoundary = YES;
         
         return self;
     };
 }
 
-- (VerbCollisionBehavior *(^)(VerbCollisionPoint point))point
+- (VerbCollisionBehavior *(^)(CGPoint fromPoint, CGPoint toPoint))boundaryPoints
 {
     @weakify(self);
-    return ^(VerbCollisionPoint point) {
+    return ^(CGPoint fromPoint, CGPoint toPoint) {
         @strongify(self);
         
-        [self.collision addBoundaryWithIdentifier:nil fromPoint:point.fromPoint toPoint:point.toPoint];
+        [self.collision addBoundaryWithIdentifier:nil fromPoint:fromPoint toPoint:toPoint];
+        self.collision.translatesReferenceBoundsIntoBoundary = YES;
         
         return self;
     };
