@@ -13,7 +13,7 @@
 @property (strong, nonatomic) UIView            *referenceView;
 @property (strong, nonatomic) NSArray           *behaviors;
 
-- (void)addBehavior:(UIDynamicBehavior *)behavior;
+- (void)addBehavior:(VerbBehavior *)behavior;
 @end
 
 @implementation VerbAnimator
@@ -32,7 +32,7 @@
     return self;
 }
 
-- (void)addBehavior:(UIDynamicBehavior *)behavior
+- (void)addBehavior:(VerbBehavior *)behavior
 {
     NSMutableArray *behaviors = [self.behaviors mutableCopy];
     [behaviors addObject:behavior];
@@ -42,12 +42,14 @@
 
 - (void)install
 {
-    NSLog(@"BEH: %@", self.behaviors);
-    
     @weakify(self);
-    [self.behaviors enumerateObjectsUsingBlock:^(UIDynamicBehavior *behavior, NSUInteger idx, BOOL *stop) {
+    [self.behaviors enumerateObjectsUsingBlock:^(VerbBehavior *behavior, NSUInteger idx, BOOL *stop) {
         @strongify(self);
-        [self.animator addBehavior:behavior];
+
+        [self.animator addBehavior:behavior.behavior];
+
+        if(behavior.childBehavior)
+            [self.animator addBehavior:behavior.childBehavior];
     }];
 }
 
@@ -59,7 +61,7 @@
     
     _collision = [VerbCollisionBehavior collisionBehaviorWithView:self.referenceView];
     
-    [self addBehavior:_collision.behavior];
+    [self addBehavior:_collision];
     
     return _collision;
 }
@@ -71,7 +73,7 @@
     
     _gravity = [VerbGravityBehavior gravityBehaviorWithView:self.referenceView];
     
-    [self addBehavior:_gravity.behavior];
+    [self addBehavior:_gravity];
     
     return _gravity;
 }
