@@ -8,31 +8,32 @@
 
 #import "UIView+Verb.h"
 #import <objc/runtime.h>
+#import "VerbAnimator.h"
 
-@interface UIView()
-@property (strong, readonly, nonatomic) UIDynamicAnimator *verb_animator;
+@interface UIView (VerbPrivate)
+@property (strong, nonatomic) VerbAnimator *animator;
 @end
 
 @implementation UIView (Verb)
-static const char *VerbAnimatorProperty = "VerbAnimatorProperty";
+static char *const VERB_ANIMATOR_KEY;
 
-- (void)setVerb_animator:(UIDynamicAnimator *)animator
+- (void)verb_makeAnimations:(void(^)(VerbAnimator *animator))block
 {
-    objc_setAssociatedObject(self, VerbAnimatorProperty, animator, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    block([self animator]);
+    [[self animator] install];
 }
 
-- (UIDynamicAnimator *)verb_animator
+#pragma mark - Getter
+- (VerbAnimator *)animator
 {
-    return (UIDynamicAnimator *)objc_getAssociatedObject(self, VerbAnimatorProperty);
-}
-
-- (void)verb_makeAnimation:(void(^)(VerbAnimator *animator))block
-{
-    self.verb_animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.superview];
-
-    VerbAnimator *animator = [[VerbAnimator alloc] initWithReferenceView:self animator:self.verb_animator];
-    block(animator);
-    [animator install];
+    VerbAnimator *instance = (VerbAnimator *)objc_getAssociatedObject(self, VERB_ANIMATOR_KEY);
+    if(instance)
+        return instance;
+    
+    instance = [[VerbAnimator alloc] initWithView:self];
+    objc_setAssociatedObject(self, VERB_ANIMATOR_KEY, instance, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    return instance;
 }
 
 @end

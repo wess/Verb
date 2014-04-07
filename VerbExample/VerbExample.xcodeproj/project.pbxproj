@@ -21,6 +21,7 @@
 		0869D05B18ECC8F200898A06 /* VerbExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869D05A18ECC8F200898A06 /* VerbExampleTests.m */; };
 		0869D06518ECC91A00898A06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D06418ECC91A00898A06 /* QuartzCore.framework */; };
 		0869D09918ECC9FA00898A06 /* libVerb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D09818ECC9FA00898A06 /* libVerb.a */; };
+		089231D318F323DE00413D74 /* VRBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089231D218F323DE00413D74 /* VRBViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		0869D05A18ECC8F200898A06 /* VerbExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerbExampleTests.m; sourceTree = "<group>"; };
 		0869D06418ECC91A00898A06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0869D09818ECC9FA00898A06 /* libVerb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVerb.a; path = "../Verb/build/Debug-iphoneos/libVerb.a"; sourceTree = "<group>"; };
+		089231D118F323DE00413D74 /* VRBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRBViewController.h; sourceTree = "<group>"; };
+		089231D218F323DE00413D74 /* VRBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +118,8 @@
 		0869D03B18ECC8F200898A06 /* VerbExample */ = {
 			isa = PBXGroup;
 			children = (
-				0869D04418ECC8F200898A06 /* VRBAppDelegate.h */,
-				0869D04518ECC8F200898A06 /* VRBAppDelegate.m */,
+				089231D018F323B800413D74 /* Controller */,
+				089231CF18F323B600413D74 /* Delegate */,
 				0869D04718ECC8F200898A06 /* Images.xcassets */,
 				0869D03C18ECC8F200898A06 /* Supporting Files */,
 			);
@@ -150,6 +153,24 @@
 				0869D05718ECC8F200898A06 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		089231CF18F323B600413D74 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				0869D04418ECC8F200898A06 /* VRBAppDelegate.h */,
+				0869D04518ECC8F200898A06 /* VRBAppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		089231D018F323B800413D74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				089231D118F323DE00413D74 /* VRBViewController.h */,
+				089231D218F323DE00413D74 /* VRBViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +271,7 @@
 			files = (
 				0869D04218ECC8F200898A06 /* main.m in Sources */,
 				0869D04618ECC8F200898A06 /* VRBAppDelegate.m in Sources */,
+				089231D318F323DE00413D74 /* VRBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

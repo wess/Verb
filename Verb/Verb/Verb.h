@@ -10,7 +10,7 @@
 #import "VerbConstants.h"
 #import "VerbAnimator.h"
 #import "VerbBehavior.h"
-#import "VerbCollisionBehavior.h"
 #import "VerbGravityBehavior.h"
+#import "VerbCollisionBehavior.h"
+#import "VerbDynamicItemBehavior.h"
 #import "UIView+Verb.h"
-

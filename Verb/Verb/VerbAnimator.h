@@ -9,14 +9,14 @@
 @import Foundation;
 @import UIKit;
 
-#import "VerbCollisionBehavior.h"
-#import "VerbGravityBehavior.h"
+@class VerbGravityBehavior, VerbCollisionBehavior, VerbDynamicItemBehavior;
 
-@interface VerbAnimator : NSObject
-@property (strong, readonly, nonatomic) VerbCollisionBehavior   *collision;
-@property (strong, readonly, nonatomic) VerbGravityBehavior     *gravity;
+@interface VerbAnimator : UIDynamicBehavior
+@property (strong, readonly, nonatomic) void(^referenceView)(UIView *view);
+@property (strong, readonly, nonatomic) VerbGravityBehavior       *gravity;
+@property (strong, readonly, nonatomic) VerbCollisionBehavior     *collision;
+@property (strong, readonly, nonatomic) VerbDynamicItemBehavior   *dynamicItem;
 
-- (instancetype)init __attribute__((unavailable("Invoke the designated initializer `initWithReferenceView` instead.")));
-- (instancetype)initWithReferenceView:(UIView *)view animator:(UIDynamicAnimator *)animator;
+- (instancetype)initWithView:(UIView *)view;
 - (void)install;
 @end

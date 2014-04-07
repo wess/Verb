@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0854078218EDB50800C5E75E /* VerbGravityBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E1518ED9F9C005FAC70 /* VerbGravityBehavior.h */; };
-		0854078318EDB51600C5E75E /* VerbBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E1A18EDA172005FAC70 /* VerbBehavior.h */; };
-		0854078818EDDD2F00C5E75E /* VerbCollisionBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 0854078618EDDD2F00C5E75E /* VerbCollisionBehavior.h */; };
-		0854078918EDDD2F00C5E75E /* VerbCollisionBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 0854078718EDDD2F00C5E75E /* VerbCollisionBehavior.m */; };
 		0869D07318ECC9A300898A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D07218ECC9A300898A06 /* Foundation.framework */; };
 		0869D07818ECC9A300898A06 /* Verb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0869D07718ECC9A300898A06 /* Verb.h */; };
 		0869D08118ECC9A300898A06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D08018ECC9A300898A06 /* XCTest.framework */; };
@@ -23,16 +19,23 @@
 		0869D09F18ECCD3D00898A06 /* UIView+Verb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0869D09B18ECCA1800898A06 /* UIView+Verb.h */; };
 		0869D0A018ECCD3D00898A06 /* Verb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0869D07718ECC9A300898A06 /* Verb.h */; };
 		0869D0A118ECCD6400898A06 /* UIView+Verb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0869D09B18ECCA1800898A06 /* UIView+Verb.h */; };
-		08DAB98218EDF40700BF0D80 /* VerbCollisionBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0854078618EDDD2F00C5E75E /* VerbCollisionBehavior.h */; };
+		089231F318F354DD00413D74 /* VerbBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231F118F354DD00413D74 /* VerbBehavior.h */; };
+		089231F418F354DD00413D74 /* VerbBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 089231F218F354DD00413D74 /* VerbBehavior.m */; };
+		089231F718F3568500413D74 /* VerbGravityBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231F518F3568500413D74 /* VerbGravityBehavior.h */; };
+		089231F818F3568500413D74 /* VerbGravityBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 089231F618F3568500413D74 /* VerbGravityBehavior.m */; };
+		089231F918F3579000413D74 /* VerbGravityBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089231F518F3568500413D74 /* VerbGravityBehavior.h */; };
+		089231FA18F3589E00413D74 /* VerbBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089231F118F354DD00413D74 /* VerbBehavior.h */; };
+		089231FD18F3590900413D74 /* VerbCollisionBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231FB18F3590900413D74 /* VerbCollisionBehavior.h */; };
+		089231FE18F3590900413D74 /* VerbCollisionBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 089231FC18F3590900413D74 /* VerbCollisionBehavior.m */; };
+		089231FF18F35AF100413D74 /* VerbCollisionBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089231FB18F3590900413D74 /* VerbCollisionBehavior.h */; };
+		0892320218F35B1300413D74 /* VerbDynamicItemBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 0892320018F35B1300413D74 /* VerbDynamicItemBehavior.h */; };
+		0892320318F35B1300413D74 /* VerbDynamicItemBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 0892320118F35B1300413D74 /* VerbDynamicItemBehavior.m */; };
+		0892320418F35BBC00413D74 /* VerbDynamicItemBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0892320018F35B1300413D74 /* VerbDynamicItemBehavior.h */; };
 		08F22E0718ECD787005FAC70 /* VerbConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E0618ECD777005FAC70 /* VerbConstants.h */; };
 		08F22E0B18ECD8A5005FAC70 /* VerbAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */; };
 		08F22E0C18ECD8A5005FAC70 /* VerbAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F22E0A18ECD8A5005FAC70 /* VerbAnimator.m */; };
 		08F22E0D18ECD9E9005FAC70 /* VerbAnimator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */; };
 		08F22E0E18ECDACB005FAC70 /* VerbConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E0618ECD777005FAC70 /* VerbConstants.h */; };
-		08F22E1718ED9F9C005FAC70 /* VerbGravityBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E1518ED9F9C005FAC70 /* VerbGravityBehavior.h */; };
-		08F22E1818ED9F9C005FAC70 /* VerbGravityBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F22E1618ED9F9C005FAC70 /* VerbGravityBehavior.m */; };
-		08F22E1C18EDA172005FAC70 /* VerbBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E1A18EDA172005FAC70 /* VerbBehavior.h */; };
-		08F22E1D18EDA172005FAC70 /* VerbBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F22E1B18EDA172005FAC70 /* VerbBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +55,10 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				08DAB98218EDF40700BF0D80 /* VerbCollisionBehavior.h in CopyFiles */,
-				0854078318EDB51600C5E75E /* VerbBehavior.h in CopyFiles */,
-				0854078218EDB50800C5E75E /* VerbGravityBehavior.h in CopyFiles */,
+				0892320418F35BBC00413D74 /* VerbDynamicItemBehavior.h in CopyFiles */,
+				089231FF18F35AF100413D74 /* VerbCollisionBehavior.h in CopyFiles */,
+				089231FA18F3589E00413D74 /* VerbBehavior.h in CopyFiles */,
+				089231F918F3579000413D74 /* VerbGravityBehavior.h in CopyFiles */,
 				08F22E0E18ECDACB005FAC70 /* VerbConstants.h in CopyFiles */,
 				08F22E0D18ECD9E9005FAC70 /* VerbAnimator.h in CopyFiles */,
 				0869D0A118ECCD6400898A06 /* UIView+Verb.h in CopyFiles */,
@@ -65,8 +69,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0854078618EDDD2F00C5E75E /* VerbCollisionBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbCollisionBehavior.h; sourceTree = "<group>"; };
-		0854078718EDDD2F00C5E75E /* VerbCollisionBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbCollisionBehavior.m; sourceTree = "<group>"; };
 		0869D06F18ECC9A300898A06 /* libVerb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVerb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0869D07218ECC9A300898A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0869D07618ECC9A300898A06 /* Verb-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Verb-Prefix.pch"; sourceTree = "<group>"; };
@@ -79,13 +81,17 @@
 		0869D08E18ECC9A400898A06 /* VerbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerbTests.m; sourceTree = "<group>"; };
 		0869D09B18ECCA1800898A06 /* UIView+Verb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Verb.h"; sourceTree = "<group>"; };
 		0869D09C18ECCA1800898A06 /* UIView+Verb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Verb.m"; sourceTree = "<group>"; };
+		089231F118F354DD00413D74 /* VerbBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbBehavior.h; sourceTree = "<group>"; };
+		089231F218F354DD00413D74 /* VerbBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbBehavior.m; sourceTree = "<group>"; };
+		089231F518F3568500413D74 /* VerbGravityBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbGravityBehavior.h; sourceTree = "<group>"; };
+		089231F618F3568500413D74 /* VerbGravityBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbGravityBehavior.m; sourceTree = "<group>"; };
+		089231FB18F3590900413D74 /* VerbCollisionBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbCollisionBehavior.h; sourceTree = "<group>"; };
+		089231FC18F3590900413D74 /* VerbCollisionBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbCollisionBehavior.m; sourceTree = "<group>"; };
+		0892320018F35B1300413D74 /* VerbDynamicItemBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbDynamicItemBehavior.h; sourceTree = "<group>"; };
+		0892320118F35B1300413D74 /* VerbDynamicItemBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbDynamicItemBehavior.m; sourceTree = "<group>"; };
 		08F22E0618ECD777005FAC70 /* VerbConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerbConstants.h; sourceTree = "<group>"; };
 		08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbAnimator.h; sourceTree = "<group>"; };
 		08F22E0A18ECD8A5005FAC70 /* VerbAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbAnimator.m; sourceTree = "<group>"; };
-		08F22E1518ED9F9C005FAC70 /* VerbGravityBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbGravityBehavior.h; sourceTree = "<group>"; };
-		08F22E1618ED9F9C005FAC70 /* VerbGravityBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbGravityBehavior.m; sourceTree = "<group>"; };
-		08F22E1A18EDA172005FAC70 /* VerbBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbBehavior.h; sourceTree = "<group>"; };
-		08F22E1B18EDA172005FAC70 /* VerbBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,15 +117,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0854078518EDDD2100C5E75E /* Collision */ = {
-			isa = PBXGroup;
-			children = (
-				0854078618EDDD2F00C5E75E /* VerbCollisionBehavior.h */,
-				0854078718EDDD2F00C5E75E /* VerbCollisionBehavior.m */,
-			);
-			name = Collision;
-			sourceTree = "<group>";
-		};
 		0869D06618ECC9A300898A06 = {
 			isa = PBXGroup;
 			children = (
@@ -152,9 +149,9 @@
 		0869D07418ECC9A300898A06 /* Verb */ = {
 			isa = PBXGroup;
 			children = (
-				08F22E0F18ED9000005FAC70 /* Behaviors */,
+				089231EC18F3549C00413D74 /* Behaviors */,
 				08F22E0818ECD898005FAC70 /* Animator */,
-				0869D09A18ECCA0300898A06 /* UIView */,
+				0869D09A18ECCA0300898A06 /* Categories */,
 				0869D07718ECC9A300898A06 /* Verb.h */,
 				0869D07518ECC9A300898A06 /* Supporting Files */,
 			);
@@ -188,13 +185,68 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0869D09A18ECCA0300898A06 /* UIView */ = {
+		0869D09A18ECCA0300898A06 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				089231D818F3424100413D74 /* UIView */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		089231D818F3424100413D74 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
 				0869D09B18ECCA1800898A06 /* UIView+Verb.h */,
 				0869D09C18ECCA1800898A06 /* UIView+Verb.m */,
 			);
 			name = UIView;
+			sourceTree = "<group>";
+		};
+		089231EC18F3549C00413D74 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				089231F018F354D600413D74 /* Base */,
+				089231EF18F354B200413D74 /* Gravity */,
+				089231EE18F354AF00413D74 /* Collision */,
+				089231ED18F354A400413D74 /* DynamicItem */,
+			);
+			name = Behaviors;
+			sourceTree = "<group>";
+		};
+		089231ED18F354A400413D74 /* DynamicItem */ = {
+			isa = PBXGroup;
+			children = (
+				0892320018F35B1300413D74 /* VerbDynamicItemBehavior.h */,
+				0892320118F35B1300413D74 /* VerbDynamicItemBehavior.m */,
+			);
+			name = DynamicItem;
+			sourceTree = "<group>";
+		};
+		089231EE18F354AF00413D74 /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+				089231FB18F3590900413D74 /* VerbCollisionBehavior.h */,
+				089231FC18F3590900413D74 /* VerbCollisionBehavior.m */,
+			);
+			name = Collision;
+			sourceTree = "<group>";
+		};
+		089231EF18F354B200413D74 /* Gravity */ = {
+			isa = PBXGroup;
+			children = (
+				089231F518F3568500413D74 /* VerbGravityBehavior.h */,
+				089231F618F3568500413D74 /* VerbGravityBehavior.m */,
+			);
+			name = Gravity;
+			sourceTree = "<group>";
+		};
+		089231F018F354D600413D74 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				089231F118F354DD00413D74 /* VerbBehavior.h */,
+				089231F218F354DD00413D74 /* VerbBehavior.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		08F22E0818ECD898005FAC70 /* Animator */ = {
@@ -206,34 +258,6 @@
 			name = Animator;
 			sourceTree = "<group>";
 		};
-		08F22E0F18ED9000005FAC70 /* Behaviors */ = {
-			isa = PBXGroup;
-			children = (
-				0854078518EDDD2100C5E75E /* Collision */,
-				08F22E1418ED9F86005FAC70 /* Gravity */,
-				08F22E1918EDA166005FAC70 /* Base */,
-			);
-			name = Behaviors;
-			sourceTree = "<group>";
-		};
-		08F22E1418ED9F86005FAC70 /* Gravity */ = {
-			isa = PBXGroup;
-			children = (
-				08F22E1518ED9F9C005FAC70 /* VerbGravityBehavior.h */,
-				08F22E1618ED9F9C005FAC70 /* VerbGravityBehavior.m */,
-			);
-			name = Gravity;
-			sourceTree = "<group>";
-		};
-		08F22E1918EDA166005FAC70 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				08F22E1A18EDA172005FAC70 /* VerbBehavior.h */,
-				08F22E1B18EDA172005FAC70 /* VerbBehavior.m */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -242,12 +266,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				08F22E0718ECD787005FAC70 /* VerbConstants.h in Headers */,
-				08F22E1C18EDA172005FAC70 /* VerbBehavior.h in Headers */,
-				0854078818EDDD2F00C5E75E /* VerbCollisionBehavior.h in Headers */,
+				0892320218F35B1300413D74 /* VerbDynamicItemBehavior.h in Headers */,
 				0869D09F18ECCD3D00898A06 /* UIView+Verb.h in Headers */,
+				089231F318F354DD00413D74 /* VerbBehavior.h in Headers */,
 				08F22E0B18ECD8A5005FAC70 /* VerbAnimator.h in Headers */,
+				089231FD18F3590900413D74 /* VerbCollisionBehavior.h in Headers */,
+				089231F718F3568500413D74 /* VerbGravityBehavior.h in Headers */,
 				0869D0A018ECCD3D00898A06 /* Verb.h in Headers */,
-				08F22E1718ED9F9C005FAC70 /* VerbGravityBehavior.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,11 +358,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08F22E1D18EDA172005FAC70 /* VerbBehavior.m in Sources */,
-				0854078918EDDD2F00C5E75E /* VerbCollisionBehavior.m in Sources */,
+				0892320318F35B1300413D74 /* VerbDynamicItemBehavior.m in Sources */,
 				0869D09D18ECCA1800898A06 /* UIView+Verb.m in Sources */,
-				08F22E1818ED9F9C005FAC70 /* VerbGravityBehavior.m in Sources */,
+				089231F818F3568500413D74 /* VerbGravityBehavior.m in Sources */,
+				089231F418F354DD00413D74 /* VerbBehavior.m in Sources */,
 				08F22E0C18ECD8A5005FAC70 /* VerbAnimator.m in Sources */,
+				089231FE18F3590900413D74 /* VerbCollisionBehavior.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

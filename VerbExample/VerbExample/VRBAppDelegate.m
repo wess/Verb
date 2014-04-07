@@ -8,32 +8,23 @@
 
 #import "VRBAppDelegate.h"
 #import <Verb/Verb.h>
+#import "VRBViewController.h"
+
+@interface VRBAppDelegate()
+@property (strong, nonatomic) VRBViewController *viewController;
+@end
 
 @implementation VRBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIViewController *controller    = [[UIViewController alloc] initWithNibName:nil bundle:nil];
-    controller.view.backgroundColor = [UIColor blueColor];
+    self.viewController = [[VRBViewController alloc] init];
     
     self.window                     = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController  = controller;
+    self.window.rootViewController  = self.viewController;
     self.window.backgroundColor     = [UIColor whiteColor];
     
     [self.window makeKeyAndVisible];
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 100.0, 100.0)];
-    view.backgroundColor = [UIColor redColor];
-    
-    [controller.view addSubview:view];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [view verb_makeAnimation:^(VerbAnimator *animator) {
-            animator.gravity.direction(VerbDirectionDown).magnitude(10);
-            animator.collision.boundaryPoints(CGPointMake(0.0, 0.0), CGPointMake(0.0, 200.0)).elasticity(0.5);
-        }];
-    });
-    
     
     return YES;
 }

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VerbAnimator.h"
 
+@class VerbAnimator;
 @interface UIView (Verb)
-- (void)verb_makeAnimation:(void(^)(VerbAnimator *animator))block;
+- (void)verb_makeAnimations:(void(^)(VerbAnimator *animator))block;
 @end

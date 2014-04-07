@@ -7,75 +7,110 @@
 //
 
 #import "VerbAnimator.h"
+#import "VerbGravityBehavior.h"
+#import "VerbCollisionBehavior.h"
+#import "VerbDynamicItemBehavior.h"
 
 @interface VerbAnimator()
 @property (strong, nonatomic) UIDynamicAnimator *animator;
-@property (strong, nonatomic) UIView            *referenceView;
+@property (strong, nonatomic) UIView            *view;
+@property (strong, nonatomic) UIView            *refView;
 @property (strong, nonatomic) NSArray           *behaviors;
 
-- (void)addBehavior:(VerbBehavior *)behavior;
+- (void)addItemBehavior:(VerbBehavior *)item;
 @end
 
 @implementation VerbAnimator
-@synthesize gravity     = _gravity;
-@synthesize collision   = _collision;
+@synthesize refView = _refView;
 
-- (instancetype)initWithReferenceView:(UIView *)view animator:(UIDynamicAnimator *)animator
+- (instancetype)initWithView:(UIView *)view
 {
     self = [super init];
     if(self)
     {
-        self.animator       = animator;
-        self.referenceView  = view;
-        self.behaviors      = @[];
+        self.view       = view;
+        self.behaviors  = @[];
     }
     return self;
 }
 
-- (void)addBehavior:(VerbBehavior *)behavior
-{
-    NSMutableArray *behaviors = [self.behaviors mutableCopy];
-    [behaviors addObject:behavior];
-    
-    _behaviors = [behaviors copy];
-}
-
 - (void)install
 {
-    @weakify(self);
     [self.behaviors enumerateObjectsUsingBlock:^(VerbBehavior *behavior, NSUInteger idx, BOOL *stop) {
-        @strongify(self);
-
-        [self.animator addBehavior:behavior.behavior];
-
-        if(behavior.childBehavior)
-            [self.animator addBehavior:behavior.childBehavior];
+        [self addChildBehavior:behavior.behavior];
     }];
+    
+    [self.animator addBehavior:self];
+}
+
+- (void)addItemBehavior:(VerbBehavior *)item
+{
+    NSMutableArray *array = [self.behaviors mutableCopy];
+    [array addObject:item];
+    
+    self.behaviors = [array copy];
 }
 
 #pragma mark - Getters
-- (VerbCollisionBehavior *)collision
+- (void(^)(UIView *view))referenceView
 {
-    if(_collision)
-        return _collision;
+    @weakify(self);
+    return ^(UIView *view) {
+        @strongify(self);
+        
+        self.refView = view;
+    };
+}
+
+- (UIDynamicAnimator *)animator
+{
+    if(_animator)
+        return _animator;
     
-    _collision = [VerbCollisionBehavior collisionBehaviorWithView:self.referenceView];
+    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.refView];
     
-    [self addBehavior:_collision];
+    return _animator;
+}
+
+- (UIView *)refView
+{
+    if(_refView)
+        return _refView;
     
-    return _collision;
+    _refView = self.view.superview?: self.view;
+    
+    return _refView;
 }
 
 - (VerbGravityBehavior *)gravity
 {
-    if(_gravity)
-        return _gravity;
+    VerbGravityBehavior *behavior = [[VerbGravityBehavior alloc] initWithItems:@[self.view]];
+    [self addItemBehavior:behavior];
     
-    _gravity = [VerbGravityBehavior gravityBehaviorWithView:self.referenceView];
+    return behavior;
+}
+
+- (VerbCollisionBehavior *)collision
+{
+    VerbCollisionBehavior *behavior = [[VerbCollisionBehavior alloc] initWithItems:@[self.view]];
+    [self addItemBehavior:behavior];
     
-    [self addBehavior:_gravity];
+    return behavior;
+}
+
+- (VerbDynamicItemBehavior *)dynamicItem
+{
+    VerbDynamicItemBehavior *behavior = [[VerbDynamicItemBehavior alloc] initWithItems:@[self.view]];
+    [self addItemBehavior:behavior];
     
-    return _gravity;
+    return behavior;
+}
+
+#pragma mark - Setters
+- (void)setRefView:(UIView *)refView
+{
+    _refView  = refView;
+    _animator = nil;
 }
 
 @end
