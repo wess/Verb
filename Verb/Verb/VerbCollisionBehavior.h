@@ -17,4 +17,8 @@
 @property (strong, readonly, nonatomic) VerbCollisionBehavior *(^translatesReferenceBoundary)(BOOL translate);
 @property (strong, readonly, nonatomic) VerbCollisionBehavior *(^addItem)(id<UIDynamicItem> item);
 @property (strong, readonly, nonatomic) VerbCollisionBehavior *(^removeItem)(id<UIDynamicItem> item);
+@property (strong, readonly, nonatomic) void(^beginContactForItem)(id<UIDynamicItem>item, id<NSCopying>identifier, CGPoint atPoint);
+@property (strong, readonly, nonatomic) void(^beginContactForItems)(id<UIDynamicItem> forItem, id<UIDynamicItem> withItem, CGPoint atPoint);
+@property (strong, readonly, nonatomic) void(^endContactForItem)(id<UIDynamicItem>item, id<NSCopying>identifier);
+@property (strong, readonly, nonatomic) void(^endContactForItems)(id<UIDynamicItem> forItem, id<UIDynamicItem> withItem);
 @end
