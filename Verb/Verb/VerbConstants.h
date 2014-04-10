@@ -6,15 +6,14 @@
 //  Copyright (c) 2014 Wess Cope. All rights reserved.
 //
 
-@import Foundation;
-@import UIKit;
-
 #ifndef _VerbConstants_h
 #define _VerbConstants_h
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define VerbMethodNotImplemented() @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"You must override %@ in a subclass.", NSStringFromSelector(_cmd)] userInfo:nil]
 
-
+//
 #ifndef weakify
 #define weakify(context) try {} @finally {} \
 __weak typeof(context) nf_weak_ ## context = context
@@ -66,3 +65,6 @@ CGVector VerbVectorForDirection(VerbDirection direction)
 }
 
 #endif
+
+
+

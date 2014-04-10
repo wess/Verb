@@ -9,6 +9,7 @@
 #import "UIView+Verb.h"
 #import <objc/runtime.h>
 #import "VerbAnimator.h"
+#import "VerbConstants.h"
 
 @interface UIView (VerbPrivate)
 @property (strong, nonatomic) VerbAnimator *animator;

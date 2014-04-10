@@ -41,12 +41,22 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)),
     
     [self.view addSubview:barrierView];
     
+    UIView *otherView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 110.0, 100.0, 100.0)];
+    otherView.backgroundColor = [UIColor purpleColor];
+    
+    [self.view addSubview:otherView];
+    
     WAIT_FOR_IT(2, {
         [self.subView verb_makeAnimations:^(VerbAnimator *animator) {
             animator.referenceView(self.view);
             animator.gravity.direction(VerbDirectionDown);
             animator.collision.translatesReferenceBoundary(YES).addItem(barrierView);
             animator.dynamicItem.elasticity(0.4).density(1.0);
+        }];
+        
+        [otherView verb_makeAnimations:^(VerbAnimator *animator) {
+            animator.attachment.attachToItem(self.subView);
+            animator.gravity.direction(VerbDirectionDown);
         }];
     });
 }

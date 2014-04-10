@@ -7,6 +7,7 @@
 //
 
 #import "VerbBehavior.h"
+#import "VerbConstants.h"
 
 @interface VerbBehavior()
 @end

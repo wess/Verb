@@ -13,4 +13,6 @@
 #import "VerbGravityBehavior.h"
 #import "VerbCollisionBehavior.h"
 #import "VerbDynamicItemBehavior.h"
+#import "VerbAttachmentBehavior.h"
 #import "UIView+Verb.h"
+#import "VerbConstants.h"

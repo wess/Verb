@@ -7,6 +7,7 @@
 //
 
 #import "VerbDynamicItemBehavior.h"
+#import "VerbConstants.h"
 
 @interface VerbDynamicItemBehavior()
 @property (strong, nonatomic) UIDynamicItemBehavior *dynamic;

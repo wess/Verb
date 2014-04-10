@@ -7,6 +7,7 @@
 //
 
 #import "VerbCollisionBehavior.h"
+#import "VerbConstants.h"
 
 @interface VerbCollisionBehaviorDelegateHandler : NSObject<UICollisionBehaviorDelegate>
 @property (copy, nonatomic) void(^beginContactForItem)(id<UIDynamicItem>item, id<NSCopying>identifier, CGPoint atPoint);

@@ -10,6 +10,8 @@
 #import "VerbGravityBehavior.h"
 #import "VerbCollisionBehavior.h"
 #import "VerbDynamicItemBehavior.h"
+#import "VerbAttachmentBehavior.h"
+#import "VerbConstants.h"
 
 @interface VerbAnimator()
 @property (strong, nonatomic) UIDynamicAnimator *animator;
@@ -101,6 +103,14 @@
 - (VerbDynamicItemBehavior *)dynamicItem
 {
     VerbDynamicItemBehavior *behavior = [[VerbDynamicItemBehavior alloc] initWithItems:@[self.view]];
+    [self addItemBehavior:behavior];
+    
+    return behavior;
+}
+
+- (VerbAttachmentBehavior *)attachment
+{
+    VerbAttachmentBehavior *behavior = [[VerbAttachmentBehavior alloc] initWithItems:@[self.view]];
     [self addItemBehavior:behavior];
     
     return behavior;

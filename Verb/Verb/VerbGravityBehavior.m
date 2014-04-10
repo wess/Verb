@@ -7,6 +7,7 @@
 //
 
 #import "VerbGravityBehavior.h"
+#import "VerbConstants.h"
 
 @interface VerbGravityBehavior()
 @property (strong, nonatomic) UIGravityBehavior *gravity;
