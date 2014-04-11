@@ -9,15 +9,17 @@
 #import "VerbCollisionBehavior.h"
 #import "VerbConstants.h"
 
+
 @interface VerbCollisionBehaviorDelegateHandler : NSObject<UICollisionBehaviorDelegate>
-@property (copy, nonatomic) void(^beginContactForItem)(id<UIDynamicItem>item, id<NSCopying>identifier, CGPoint atPoint);
-@property (copy, nonatomic) void(^beginContactForItems)(id<UIDynamicItem> forItem, id<UIDynamicItem> withItem, CGPoint atPoint);
-@property (copy, nonatomic) void(^endContactForItem)(id<UIDynamicItem>item, id<NSCopying>identifier);
-@property (copy, nonatomic) void(^endContactForItems)(id<UIDynamicItem> forItem, id<UIDynamicItem> withItem);
+@property (strong, nonatomic) VerbCollisionBehavior                 *behavior;
+@property (copy, nonatomic) VerbCollisionBeginContactForItemBlock   beginContactForItem;
+@property (copy, nonatomic) VerbCollisionBeginContactForItemsBlock  beginContactForItems;
+@property (copy, nonatomic) VerbCollisionEndContactForItemBlock     endContactForItem;
+@property (copy, nonatomic) VerbCollisionEndContactForItemsBlock    endContactForItems;
 @end
 
 @implementation VerbCollisionBehaviorDelegateHandler
-
+#pragma mark - UICollisionBehaviorDelegate
 - (void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p
 {
     if(self.beginContactForItem)
@@ -71,6 +73,7 @@
         return _delegateHandler;
     
     _delegateHandler                    = [[VerbCollisionBehaviorDelegateHandler alloc] init];
+    _delegateHandler.behavior           = self;
     self.collision.collisionDelegate    = _delegateHandler;
     
     return _delegateHandler;
@@ -161,25 +164,59 @@
     };
 }
 
-#pragma mark - Delegate base callbacks
-- (void)setBeginContactForItem:(void (^)(id<UIDynamicItem>, id<NSCopying>, CGPoint))beginContactForItem
+- (VerbCollisionBehavior *(^)(VerbCollisionBeginContactForItemBlock block))beginContactForItem
 {
-    self.delegateHandler.beginContactForItem = beginContactForItem;
+    @weakify(self);
+    return ^(VerbCollisionBeginContactForItemBlock block) {
+        @strongify(self);
+        
+        self.delegateHandler.beginContactForItem = block;
+        
+        return self;
+    };
 }
 
-- (void)setBeginContactForItems:(void (^)(id<UIDynamicItem>, id<UIDynamicItem>, CGPoint))beginContactForItems
+- (VerbCollisionBehavior *(^)(VerbCollisionBeginContactForItemsBlock block))beginContactForItems
 {
-    self.delegateHandler.beginContactForItems = beginContactForItems;
+    @weakify(self);
+    return ^(VerbCollisionBeginContactForItemsBlock block) {
+        @strongify(self);
+        
+        self.delegateHandler.beginContactForItems = block;
+        
+        return self;
+    };
 }
 
-- (void)setEndContactForItem:(void (^)(id<UIDynamicItem>, id<NSCopying>))endContactForItem
+- (VerbCollisionBehavior *(^)(VerbCollisionEndContactForItemBlock block))endContactForItem
 {
-    self.delegateHandler.endContactForItem = endContactForItem;
+    @weakify(self);
+    return ^(VerbCollisionEndContactForItemBlock block) {
+        @strongify(self);
+        
+        self.delegateHandler.endContactForItem = block;
+        
+        return self;
+    };
 }
 
-- (void)setEndContactForItems:(void (^)(id<UIDynamicItem>, id<UIDynamicItem>))endContactForItems
+- (VerbCollisionBehavior *(^)(VerbCollisionEndContactForItemsBlock block))endContactForItems
 {
-    self.delegateHandler.endContactForItems = endContactForItems;
+    @weakify(self);
+    return ^(VerbCollisionEndContactForItemsBlock block) {
+        @strongify(self);
+        
+        self.delegateHandler.endContactForItems = block;
+        
+        return self;
+    };
 }
 
 @end
+
+
+
+
+
+
+

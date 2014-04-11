@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "VerbBehavior.h"
 
+@class VerbCollisionBehavior;
+
+typedef VerbCollisionBehavior   *(^VerbCollisionBeginContactForItemBlock)(id<UIDynamicItem>item, id<NSCopying>identifier, CGPoint atPoint);
+typedef VerbCollisionBehavior   *(^VerbCollisionBeginContactForItemsBlock)(id<UIDynamicItem> forItem, id<UIDynamicItem> withItem, CGPoint atPoint);
+typedef VerbCollisionBehavior   *(^VerbCollisionEndContactForItemBlock)(id<UIDynamicItem>item, id<NSCopying>identifier);
+typedef VerbCollisionBehavior   *(^VerbCollisionEndContactForItemsBlock)(id<UIDynamicItem> forItem, id<UIDynamicItem> withItem);
+
 @interface VerbCollisionBehavior : VerbBehavior
 @property (strong, readonly, nonatomic) VerbCollisionBehavior *(^mode)(UICollisionBehaviorMode mode);
 @property (strong, readonly, nonatomic) VerbCollisionBehavior *(^boundaryPath)(NSString *identifier, UIBezierPath *path);
@@ -17,8 +24,8 @@
 @property (strong, readonly, nonatomic) VerbCollisionBehavior *(^translatesReferenceBoundary)(BOOL translate);
 @property (strong, readonly, nonatomic) VerbCollisionBehavior *(^addItem)(id<UIDynamicItem> item);
 @property (strong, readonly, nonatomic) VerbCollisionBehavior *(^removeItem)(id<UIDynamicItem> item);
-@property (strong, readonly, nonatomic) void(^beginContactForItem)(id<UIDynamicItem>item, id<NSCopying>identifier, CGPoint atPoint);
-@property (strong, readonly, nonatomic) void(^beginContactForItems)(id<UIDynamicItem> forItem, id<UIDynamicItem> withItem, CGPoint atPoint);
-@property (strong, readonly, nonatomic) void(^endContactForItem)(id<UIDynamicItem>item, id<NSCopying>identifier);
-@property (strong, readonly, nonatomic) void(^endContactForItems)(id<UIDynamicItem> forItem, id<UIDynamicItem> withItem);
+@property (strong, readonly, nonatomic) VerbCollisionBehavior *(^beginContactForItem)(VerbCollisionBeginContactForItemBlock block);
+@property (strong, readonly, nonatomic) VerbCollisionBehavior *(^beginContactForItems)(VerbCollisionBeginContactForItemsBlock block);
+@property (strong, readonly, nonatomic) VerbCollisionBehavior *(^endContactForItem)(VerbCollisionEndContactForItemBlock block);
+@property (strong, readonly, nonatomic) VerbCollisionBehavior *(^endContactForItems)(VerbCollisionEndContactForItemsBlock block);
 @end
