@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.source_files            = "Verb/Verb/*.{h,m}"
   s.requires_arc            = true
   s.frameworks              = "Foundation", "UIKit", "QuartzCore", "Security", "Accelerate"
+  s.prefix_header_contents  = '#import <Verb/Verb.h>'
 end
