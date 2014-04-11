@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08043E2918F6D71E00876E1F /* VerbAttachmentBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 08043E2718F6D71E00876E1F /* VerbAttachmentBehavior.h */; };
+		08043E2918F6D71E00876E1F /* VerbAttachmentBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 08043E2718F6D71E00876E1F /* VerbAttachmentBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08043E2A18F6D71E00876E1F /* VerbAttachmentBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 08043E2818F6D71E00876E1F /* VerbAttachmentBehavior.m */; };
 		08043E2B18F6E75C00876E1F /* VerbAttachmentBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08043E2718F6D71E00876E1F /* VerbAttachmentBehavior.h */; };
 		0869D07318ECC9A300898A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869D07218ECC9A300898A06 /* Foundation.framework */; };
@@ -19,23 +19,23 @@
 		0869D08D18ECC9A400898A06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0869D08B18ECC9A400898A06 /* InfoPlist.strings */; };
 		0869D08F18ECC9A400898A06 /* VerbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869D08E18ECC9A400898A06 /* VerbTests.m */; };
 		0869D09D18ECCA1800898A06 /* UIView+Verb.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869D09C18ECCA1800898A06 /* UIView+Verb.m */; };
-		0869D09F18ECCD3D00898A06 /* UIView+Verb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0869D09B18ECCA1800898A06 /* UIView+Verb.h */; };
-		0869D0A018ECCD3D00898A06 /* Verb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0869D07718ECC9A300898A06 /* Verb.h */; };
+		0869D09F18ECCD3D00898A06 /* UIView+Verb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0869D09B18ECCA1800898A06 /* UIView+Verb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0869D0A018ECCD3D00898A06 /* Verb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0869D07718ECC9A300898A06 /* Verb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0869D0A118ECCD6400898A06 /* UIView+Verb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0869D09B18ECCA1800898A06 /* UIView+Verb.h */; };
-		089231F318F354DD00413D74 /* VerbBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231F118F354DD00413D74 /* VerbBehavior.h */; };
+		089231F318F354DD00413D74 /* VerbBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231F118F354DD00413D74 /* VerbBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		089231F418F354DD00413D74 /* VerbBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 089231F218F354DD00413D74 /* VerbBehavior.m */; };
-		089231F718F3568500413D74 /* VerbGravityBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231F518F3568500413D74 /* VerbGravityBehavior.h */; };
+		089231F718F3568500413D74 /* VerbGravityBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231F518F3568500413D74 /* VerbGravityBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		089231F818F3568500413D74 /* VerbGravityBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 089231F618F3568500413D74 /* VerbGravityBehavior.m */; };
 		089231F918F3579000413D74 /* VerbGravityBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089231F518F3568500413D74 /* VerbGravityBehavior.h */; };
 		089231FA18F3589E00413D74 /* VerbBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089231F118F354DD00413D74 /* VerbBehavior.h */; };
-		089231FD18F3590900413D74 /* VerbCollisionBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231FB18F3590900413D74 /* VerbCollisionBehavior.h */; };
+		089231FD18F3590900413D74 /* VerbCollisionBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 089231FB18F3590900413D74 /* VerbCollisionBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		089231FE18F3590900413D74 /* VerbCollisionBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 089231FC18F3590900413D74 /* VerbCollisionBehavior.m */; };
 		089231FF18F35AF100413D74 /* VerbCollisionBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089231FB18F3590900413D74 /* VerbCollisionBehavior.h */; };
-		0892320218F35B1300413D74 /* VerbDynamicItemBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 0892320018F35B1300413D74 /* VerbDynamicItemBehavior.h */; };
+		0892320218F35B1300413D74 /* VerbDynamicItemBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 0892320018F35B1300413D74 /* VerbDynamicItemBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0892320318F35B1300413D74 /* VerbDynamicItemBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 0892320118F35B1300413D74 /* VerbDynamicItemBehavior.m */; };
 		0892320418F35BBC00413D74 /* VerbDynamicItemBehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0892320018F35B1300413D74 /* VerbDynamicItemBehavior.h */; };
-		08F22E0718ECD787005FAC70 /* VerbConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E0618ECD777005FAC70 /* VerbConstants.h */; };
-		08F22E0B18ECD8A5005FAC70 /* VerbAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */; };
+		08F22E0718ECD787005FAC70 /* VerbConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E0618ECD777005FAC70 /* VerbConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08F22E0B18ECD8A5005FAC70 /* VerbAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08F22E0C18ECD8A5005FAC70 /* VerbAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F22E0A18ECD8A5005FAC70 /* VerbAnimator.m */; };
 		08F22E0D18ECD9E9005FAC70 /* VerbAnimator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */; };
 		08F22E0E18ECDACB005FAC70 /* VerbConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E0618ECD777005FAC70 /* VerbConstants.h */; };
