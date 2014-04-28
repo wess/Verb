@@ -14,7 +14,6 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)),
 
 @interface VRBViewController ()
 @property (strong, nonatomic) UIView            *subView;
-@property (strong, nonatomic) UIDynamicAnimator *animator;
 @end
 
 @implementation VRBViewController
@@ -74,14 +73,5 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)),
     return _subView;
 }
 
-- (UIDynamicAnimator *)animator
-{
-    if(_animator)
-        return _animator;
-    
-    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-    
-    return _animator;
-}
 
 @end
