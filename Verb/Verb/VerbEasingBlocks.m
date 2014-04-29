@@ -1,12 +1,12 @@
 //
-//  VerbEasingFunctions.m
+//  VerbEasingBlocks.m
 //  Verb
 //
-//  Created startValuey Wess Cope on 4/28/14.
+//  Created Wess Cope on 4/28/14.
 //  Copyright (c) 2014 Wess Cope. All rights reserved.
 //
 
-#import "VerbEasingFunctions.h"
+#import "VerbEasingBlocks.h"
 
 #if CGFLOAT_IS_DOUBLE
 #define POW(X, Y) pow(X, Y)

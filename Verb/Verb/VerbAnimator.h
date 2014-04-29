@@ -15,7 +15,7 @@
 @property (strong, readonly, nonatomic) void(^referenceView)(UIView *view);
 @property (strong, readonly, nonatomic) VerbGravityBehavior     *gravity;
 @property (strong, readonly, nonatomic) VerbCollisionBehavior   *collision;
-@property (strong, readonly, nonatomic) VerbDynamicItemBehavior *dynamicItem;
+@property (strong, readonly, nonatomic) VerbDynamicItemBehavior *dynamic;
 @property (strong, readonly, nonatomic) VerbAttachmentBehavior  *attachment;
 
 
