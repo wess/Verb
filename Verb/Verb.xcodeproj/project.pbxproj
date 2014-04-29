@@ -39,6 +39,8 @@
 		08F22E0C18ECD8A5005FAC70 /* VerbAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F22E0A18ECD8A5005FAC70 /* VerbAnimator.m */; };
 		08F22E0D18ECD9E9005FAC70 /* VerbAnimator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */; };
 		08F22E0E18ECDACB005FAC70 /* VerbConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08F22E0618ECD777005FAC70 /* VerbConstants.h */; };
+		08F457A8190F1B3400802E24 /* VerbEasingFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F457A6190F1B3400802E24 /* VerbEasingFunctions.h */; };
+		08F457A9190F1B3400802E24 /* VerbEasingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F457A7190F1B3400802E24 /* VerbEasingFunctions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		08F22E0618ECD777005FAC70 /* VerbConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerbConstants.h; sourceTree = "<group>"; };
 		08F22E0918ECD8A5005FAC70 /* VerbAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbAnimator.h; sourceTree = "<group>"; };
 		08F22E0A18ECD8A5005FAC70 /* VerbAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbAnimator.m; sourceTree = "<group>"; };
+		08F457A6190F1B3400802E24 /* VerbEasingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbEasingFunctions.h; sourceTree = "<group>"; };
+		08F457A7190F1B3400802E24 /* VerbEasingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbEasingFunctions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 		0869D07418ECC9A300898A06 /* Verb */ = {
 			isa = PBXGroup;
 			children = (
+				08F457A4190F1B1F00802E24 /* Factory */,
 				089231EC18F3549C00413D74 /* Behaviors */,
 				08F22E0818ECD898005FAC70 /* Animator */,
 				0869D09A18ECCA0300898A06 /* Categories */,
@@ -274,6 +279,23 @@
 			name = Animator;
 			sourceTree = "<group>";
 		};
+		08F457A4190F1B1F00802E24 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				08F457A5190F1B2500802E24 /* Easing */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		08F457A5190F1B2500802E24 /* Easing */ = {
+			isa = PBXGroup;
+			children = (
+				08F457A6190F1B3400802E24 /* VerbEasingFunctions.h */,
+				08F457A7190F1B3400802E24 /* VerbEasingFunctions.m */,
+			);
+			name = Easing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -285,6 +307,7 @@
 				08043E2918F6D71E00876E1F /* VerbAttachmentBehavior.h in Headers */,
 				0892320218F35B1300413D74 /* VerbDynamicItemBehavior.h in Headers */,
 				0869D09F18ECCD3D00898A06 /* UIView+Verb.h in Headers */,
+				08F457A8190F1B3400802E24 /* VerbEasingFunctions.h in Headers */,
 				089231F318F354DD00413D74 /* VerbBehavior.h in Headers */,
 				08F22E0B18ECD8A5005FAC70 /* VerbAnimator.h in Headers */,
 				089231FD18F3590900413D74 /* VerbCollisionBehavior.h in Headers */,
@@ -382,6 +405,7 @@
 				08043E2A18F6D71E00876E1F /* VerbAttachmentBehavior.m in Sources */,
 				08F22E0C18ECD8A5005FAC70 /* VerbAnimator.m in Sources */,
 				089231FE18F3590900413D74 /* VerbCollisionBehavior.m in Sources */,
+				08F457A9190F1B3400802E24 /* VerbEasingFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,7 @@
 @property (strong, readonly, nonatomic) VerbDynamicItemBehavior *dynamicItem;
 @property (strong, readonly, nonatomic) VerbAttachmentBehavior  *attachment;
 
+
 - (instancetype)initWithView:(UIView *)view;
 - (void)install;
 @end

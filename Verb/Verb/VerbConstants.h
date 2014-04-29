@@ -11,9 +11,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// Defaults
+static CGFloat const VerbDefaultDuration = 0.5;
+
+// System
 #define VerbMethodNotImplemented() @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"You must override %@ in a subclass.", NSStringFromSelector(_cmd)] userInfo:nil]
 
-//
 #ifndef weakify
 #define weakify(context) try {} @finally {} \
 __weak typeof(context) nf_weak_ ## context = context
@@ -28,6 +31,7 @@ _Pragma("clang diagnostic pop")
 #endif
 
 typedef void(^VerbBlock)(void);
+typedef CGFloat(^VerbEasingBlock)(NSTimeInterval, CGFloat, CGFloat, NSTimeInterval);
 
 typedef NS_ENUM(NSInteger, VerbDirection)
 {

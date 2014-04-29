@@ -18,6 +18,7 @@
 @property (strong, nonatomic) UIView            *view;
 @property (strong, nonatomic) UIView            *refView;
 @property (strong, nonatomic) NSArray           *behaviors;
+@property (nonatomic) NSTimeInterval            animationDuration;
 
 - (void)addItemBehavior:(VerbBehavior *)item;
 @end
@@ -30,8 +31,9 @@
     self = [super init];
     if(self)
     {
-        self.view       = view;
-        self.behaviors  = @[];
+        self.view               = view;
+        self.behaviors          = @[];
+        self.animationDuration  = VerbDefaultDuration;
     }
     return self;
 }
@@ -47,6 +49,8 @@
 
 - (void)addItemBehavior:(VerbBehavior *)item
 {
+    item.view = self.view;
+    
     NSMutableArray *array = [self.behaviors mutableCopy];
     [array addObject:item];
     
@@ -122,6 +126,8 @@
     _refView  = refView;
     _animator = nil;
 }
+
+#pragma mark - Basic animations
 
 @end
 

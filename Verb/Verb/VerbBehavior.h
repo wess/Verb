@@ -10,8 +10,9 @@
 @import UIKit;
 
 @interface VerbBehavior : NSObject
-@property (copy, nonatomic) VerbBlock action;
-@property (strong, readonly, nonatomic) UIDynamicBehavior *behavior;
+@property (copy, nonatomic) VerbBlock                       action;
+@property (strong, readonly, nonatomic) UIDynamicBehavior   *behavior;
+@property (strong, nonatomic) UIView                        *view;
 
 - (instancetype)initWithItems:(NSArray *)items;
 

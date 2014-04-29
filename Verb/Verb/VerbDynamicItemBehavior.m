@@ -14,6 +14,15 @@
 @end
 
 @implementation VerbDynamicItemBehavior
+- (instancetype)initWithItems:(NSArray *)items
+{
+    self = [super initWithItems:items];
+    if(self)
+    {
+    }
+    return self;
+}
+
 - (UIDynamicItemBehavior *)dynamic
 {
     if(_dynamic)
